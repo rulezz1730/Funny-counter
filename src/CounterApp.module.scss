@@ -1,0 +1,120 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #172125;
+  height: 100vh;
+}
+
+.displayNone{
+  display: none;
+}
+
+.header{
+  display: flex;
+}
+
+.linkStyle {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.activeLink {
+  font-weight: bold;
+  color: #8feeee;
+}
+
+.counterApp {
+  display: flex;
+}
+
+.counter {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 450px;
+  height: 350px;
+  margin-right: 40px;
+  border: 3px solid #8feeee;
+  box-sizing: border-box;
+  background-color: #172125;
+  border-radius: 10px;
+}
+
+.screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 30%;
+  //margin-bottom: 15px;
+  background: #8feeee;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+.screenRedText {
+  color: red;
+}
+
+.buttonBlock {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: 30%;
+  border: 3px solid #8feeee;
+  background-color: #172125;
+  border-radius: 10px;
+
+  button {
+    width: 100px;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 5px;
+    color: #172125;
+    background-color: #8feeee;
+    cursor: pointer;
+
+    &:disabled {
+      background: lightslategrey;
+    }
+  }
+}
+
+.inputBlock{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 315px;
+  height: 100px;
+  padding: 5px;
+  border: 3px solid #8feeee;
+  border-radius: 10px;
+}
+
+.universalInput {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  color: #8feeee;
+  font-size: 25px;
+
+  input {
+    text-align: center;
+    width: 120px;
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+}
+
+.errorInput{
+  border: 2px solid #f68c66;
+  background-color: rosybrown;
+}
