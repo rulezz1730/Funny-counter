@@ -1,19 +1,17 @@
 import React, {FC} from "react";
 import styles from "../../CounterApp.module.scss";
+import {ErrorMessageType} from "../store/counterReducer";
 
 type ScreenPropsType = {
     count: number | string;
     isMaxCount: boolean;
+    error?: ErrorMessageType;
     message?: string;
-    error?: string;
 }
 
-const Screen: FC<ScreenPropsType>= ({count, isMaxCount, message, error}) => {
+const Screen: FC<ScreenPropsType>= ({count, isMaxCount, error, message}) => {
 
-    const viewMessage = error ? error : message
-    console.log(error)
-
-    return <div className={`${styles.screen} ${isMaxCount && styles.screenRedText} ${error?styles.screenRedText:""}`}>{viewMessage? viewMessage : count}</div>
+    return <div className={`${styles.screen} ${isMaxCount && styles.screenRedText} ${error?styles.screenRedText:""}`}>{error? error : message ? message : count}</div>
 }
 
 export default Screen;
